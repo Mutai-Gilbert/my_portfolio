@@ -29,14 +29,6 @@ export default function Blog() {
                   <h1>Gilbert Mutai</h1>
                   <p>Software Engineer | Entrepreneurial Mindset | Machine Learning Enthusiast | Drivin Innovation with AI                   </p>
             </AboutSection>
-             <AboutSection imageUrl={boyComputer}>
-                  <h1>Gilbert Mutai</h1>
-                  <p>Software Engineer | Entrepreneurial Mindset | Machine Learning Enthusiast | Drivin Innovation with AI                   </p>
-            </AboutSection>
-            <AboutSection imageUrl={boyComputer}>
-                  <h1>Gilbert Mutai</h1>
-                  <p>Software Engineer | Entrepreneurial Mindset | Machine Learning Enthusiast | Drivin Innovation with AI                   </p>
-            </AboutSection>
         <AboutLinks /> 
         </div>
     </Layout>
