@@ -7,22 +7,17 @@ export default function SkillsRadar() {
     <div className={styles.panel}>
       <div className={styles.scanner}></div>
       <ul className={styles.items}>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JAVASCRIPT</li>
-        <li>TYPESCRIPT</li>
-        <li>Tailwind CSS</li>
-        <li>Bootstrap</li>
+        <li>Python</li>
+	<li>Golang</li>
+        <li>Typescript</li>
         <li>REACT</li>
         <li>Express</li>
-        <li>Nodejs</li>
-        <li>Nextjs</li>
-        <li>Nuxtjs</li>
-        <li>GIT</li>
-        <li>SCSS</li>
-        <li>NEXT.JS</li>
-        <li>UI/UX</li>
-        <li>REST API</li>
+        <li>NodeJs</li>
+        <li>NextJs</li>
+        <li>Docker</li>
+        <li>AWS</li>
+        <li>FeathersJs</li>
+        <li>Digital Ocean</li>
         <li>AGILE/SCRUM</li>
       </ul>
     </div>
