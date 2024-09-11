@@ -63,7 +63,7 @@ export default function Home() {
                     </span>{" "}
                     {partThree && (
                       <Typewriter
-                        text="Machine Learning Engineer / Full Stack Developer ?"
+                        text="Backend Engineer?"
                         onEnd={() => setPartFour(true)}
                       />
                     )}
@@ -84,7 +84,8 @@ export default function Home() {
                   className={styles.introduction}
                 >
                   <span className={styles.firstWord}>Hi</span>I'm Mutai 👋
-                    A passionate Full Stack Software Developer 🚀 with a love for JavaScri                  pt, Ruby, Ruby on Rails, Redux, SQL, PostgreSQL, C, React. Open Source C                ontributor. Open to new opportunities.</motion.p>
+                    Experienced Backend Developer 🚀 with a proven track record of designing and implementing scalable systems and delivering seamless mobile/web 
+experiences.Open Source Contributor. Open to new opportunities.</motion.p>
                 <motion.p
                   {...commonProps}
                   transition={{ duration: 1, delay: 0.3 }}

@@ -32,7 +32,7 @@ export default function About() {
       <div className={styles.container}>
         <AboutSection imageUrl={boyComputer}>
           <h1>Gilbert Mutai</h1>
-          <p>Software Engineer | Entrepreneurial Mindset | Machine Learning Enthusiast | Driving                Innovation with AI </p>
+          <p>Software Engineer | Entrepreneurial Mindset | Machine Learning Enthusiast | Driving Innovation with AI </p>
           <p>
             I love building innovative web solutions and contributing to meaningful projects!
           </p>

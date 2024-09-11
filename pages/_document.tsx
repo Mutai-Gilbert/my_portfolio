@@ -7,9 +7,8 @@ export default function Document() {
         <meta
           name="description"
           content="Hi, I'm Gilbert,
-          Full Stack Developer/ Machine Learning Engineer with a passion for creating
-          visually pleasing websites and web applications, that deliver
-          exceptional user experiences."
+          Backend Engineer with a proven track record of designing and implementing scalable systems and delivering seamless 
+mobile/web experiences."
         />
 
         <meta name="theme-color" content="#05321e" />
@@ -18,9 +17,8 @@ export default function Document() {
         <meta
           property="og:description"
           content="Hi, I'm Gilbert,
-          Full Stack Developer/ Machine Learning Engineer with a passion for creating
-          visually pleasing websites and web applications, that deliver
-          exceptional user experiences."
+          Backend Engineer with a proven track record of designing and implementing scalable systems and delivering seamless
+mobile/web experiences."
         />
         <meta property="og:image" content="/images/og-image.png" />
         <link rel="icon" href="/favicon.ico" />
