@@ -44,62 +44,31 @@ export default function Home() {
           <Layout>
             <div className={styles.heroContainer}>
               <section className={styles.hero}>
-                <h1 className={styles.title}>
-                  {partOne && (
-                    <Typewriter
-                      text="Looking for a"
-                      onEnd={() => setPartTwo(true)}
-                    />
-                  )}
-                  <br />
-                  <span className={styles.job}>
-                    <span className={styles.talented}>
-                      {partTwo && (
-                        <Typewriter
-                          text="talented"
-                          onEnd={() => setPartThree(true)}
-                        />
-                      )}
-                    </span>{" "}
-                    {partThree && (
-                      <Typewriter
-                        text="Backend Engineer?"
-                        onEnd={() => setPartFour(true)}
-                      />
-                    )}
-                  </span>
-                  <br />
-                  <span className={styles.stopLooking}>
-                    {partFour && (
-                      <Typewriter
-                        text="Look no further!"
-                        onEnd={() => setShowContent({ opacity: 1, y: 0 })}
-                      />
-                    )}
-                  </span>
-                </h1>
-                <motion.p
-                  {...commonProps}
-                  transition={{ duration: 1 }}
-                  className={styles.introduction}
+                <motion.div 
+                  className={styles.heroContent}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
                 >
-                  <span className={styles.firstWord}>Hi</span>I'm Mutai 👋
-                    Experienced Backend Developer 🚀 with a proven track record of designing and implementing scalable systems and delivering seamless mobile/web 
-experiences.Open Source Contributor. Open to new opportunities.</motion.p>
-                <motion.p
-                  {...commonProps}
-                  transition={{ duration: 1, delay: 0.3 }}
-                  className={styles.link}
+                  <h1 className={styles.title}>
+                    <span className={styles.highlight}>Backend Engineer</span> with a passion for scalable solutions
+                  </h1>
+                  <p className={styles.introduction}>
+                    Hi, I'm Mutai 👋 I design and implement robust systems that power seamless digital experiences.
+                  </p>
+                  <div className={styles.ctaContainer}>
+                    <HomeLink linkTo="/projects" text="View My Work" />
+                    <HomeLink linkTo="/about" text="About Me" />
+                  </div>
+                </motion.div>
+                <motion.div 
+                  className={styles.heroVisual}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  <HomeLink linkTo="/projects" text="CHECK OUT MY WORK"/>
-                </motion.p>
-                <motion.p
-                  {...commonProps}
-                  transition={{ duration: 1, delay: 0.7 }}
-                  className={styles.link}
-                >
-                  <HomeLink linkTo="/about" text="ABOUT ME"/>
-                </motion.p>
+                  {/* Modern visual element here - could be an updated skills visualization */}
+                </motion.div>
               </section>
               <motion.section
                 {...commonProps}
