@@ -1,3 +1,4 @@
+@import "@/styles/variables.scss";
 @import "@/styles/animations";
 @import "@/styles/colors";
 
@@ -20,4 +21,55 @@
     text-align: center;
     letter-spacing: 1px;
   }
+}
+
+.welcomeContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondary-color;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: 5rem;
+  }
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: rgba(white, 0.8);
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 1.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.loader {
+  height: 3px;
+  background: linear-gradient(90deg, $primary-color, $accent-color);
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
+  width: 80%;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba($accent-color, 0.5);
 }

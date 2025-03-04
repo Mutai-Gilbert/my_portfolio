@@ -24,6 +24,7 @@ export default function AboutLinks() {
       <a
         href="https://www.linkedin.com/in/mutai-kipkoech/"
         target="_blank"
+        rel="noopener noreferrer"
         className={styles.link}
         onMouseEnter={() => setLinkedInIcon(linkedInHover)}
         onMouseLeave={() => setLinkedInIcon(linkedIn)}
@@ -34,6 +35,7 @@ export default function AboutLinks() {
       <a
         href="https://github.com/Mutai-Gilbert"
         target="_blank"
+        rel="noopener noreferrer"
         className={styles.link}
         onMouseEnter={() => setGitHubIcon(gitHubHover)}
         onMouseLeave={() => setGitHubIcon(gitHub)}

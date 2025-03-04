@@ -1,38 +1,74 @@
-import React from "react";
-import styles from "@/styles/components/Header.module.scss";
-import Link from "@/lib/link";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import styles from "@/styles/components/Header.module.scss";
 import BurgerMenu from "@/components/BurgerMenu";
 
 export default function Header() {
   const router = useRouter();
-  const { pathname } = router;
-  // Extract the text after the last `/`
-  const currentPage = pathname.substring(pathname.lastIndexOf("/") + 1);
-
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  const isActive = (path: string) => router.pathname === path;
+  
   return (
     <>
-      <header className={styles.header}>
-        <Link href="/" className={styles.logo}>&lt;/gilbert&gt;</Link>
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            <li className={currentPage === "" ? styles.selected : ""}>
-              <Link href="/">HOME</Link>
-            </li>
-            <li className={currentPage === "projects" ? styles.selected : ""}>
-              <Link href="/projects">PROJECTS</Link>
-            </li>
-             <li className={currentPage === "blog" ? styles.selected : ""}>
-              <Link href="/blog">BLOG</Link>
-            </li><li className={currentPage === "about" ? styles.selected : ""}>
-              <Link href="/about">ABOUT</Link>
-            </li>
-            <li className={currentPage === "contact" ? styles.selected : ""}>
-              <Link href="/contact">CONTACT</Link>
-            </li>
-          </ul>
-        </nav>
-        <BurgerMenu currentPage={currentPage} />
+      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+        <div className={styles.container}>
+          <Link href="/">
+            <a className={styles.logo}>
+              <span className={styles.bracket}>&lt;/</span>
+              <span className={styles.name}>gilbert</span>
+              <span className={styles.bracket}>&gt;</span>
+            </a>
+          </Link>
+          
+          <button 
+            className={`${styles.mobileMenuButton} ${mobileMenuOpen ? styles.open : ''}`}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <nav className={`${styles.nav} ${mobileMenuOpen ? styles.open : ''}`}>
+            <ul className={styles.navList}>
+              {['', 'projects', 'blog', 'about', 'contact'].map((path) => (
+                <li key={path} className={styles.navItem}>
+                  <Link href={path === '' ? '/' : `/${path}`}>
+                    <a className={`${styles.navLink} ${isActive(path === '' ? '/' : `/${path}`) ? styles.active : ''}`}>
+                      {path === '' ? 'HOME' : path.toUpperCase()}
+                      {isActive(path === '' ? '/' : `/${path}`) && (
+                        <motion.span 
+                          className={styles.activeIndicator}
+                          layoutId="activeIndicator"
+                          transition={{ type: "spring", duration: 0.5 }}
+                        />
+                      )}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          
+          <button className={styles.themeToggle}>
+            {/* Theme toggle icon */}
+          </button>
+        </div>
+        <BurgerMenu currentPage={router.pathname.substring(router.pathname.lastIndexOf("/") + 1)} />
       </header>
       <div className={styles.headerUnderline} />
     </>

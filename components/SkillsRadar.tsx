@@ -8,7 +8,7 @@ export default function SkillsRadar() {
       <div className={styles.scanner}></div>
       <ul className={styles.items}>
         <li>Python</li>
-	<li>Golang</li>
+	      <li>Golang</li>
         <li>Typescript</li>
         <li>REACT</li>
         <li>Express</li>
