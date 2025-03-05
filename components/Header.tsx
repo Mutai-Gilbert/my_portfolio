@@ -25,13 +25,6 @@ export default function Header() {
     <>
       <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={styles.container}>
-          <Link href="/">
-            <a className={styles.logo}>
-              <span className={styles.bracket}>&lt;/</span>
-              <span className={styles.name}>gilbert</span>
-              <span className={styles.bracket}>&gt;</span>
-            </a>
-          </Link>
           
           <button 
             className={`${styles.mobileMenuButton} ${mobileMenuOpen ? styles.open : ''}`}
