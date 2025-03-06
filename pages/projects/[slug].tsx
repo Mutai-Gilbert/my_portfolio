@@ -75,7 +75,7 @@ export default function CaseStudy({ frontmatter, content }: Props) {
           <Image
             priority
             width={1000}
-            height={700}
+            height={1000}
             className={styles.thumbnail}
             src={`/${frontmatter.thumbnail}`}
             alt={frontmatter.title}
