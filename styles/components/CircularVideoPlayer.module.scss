@@ -1,0 +1,257 @@
+.circularVideoContainer {
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  
+  @media (max-width: 768px) {
+    width: 280px;
+    margin-top: 2rem;
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; // 1:1 aspect ratio for circular shape
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(27, 255, 128, 0.3);
+  border: 3px solid #1bff80;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(27, 255, 128, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.circularVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #1bff80;
+  color: #1bff80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(27, 255, 128, 0.5);
+  }
+  
+  svg {
+    margin-left: 4px; // Slight adjustment for the play icon
+  }
+}
+
+.audioControls {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: 1px solid rgba(27, 255, 128, 0.5);
+}
+
+.volumeButton {
+  background: none;
+  border: none;
+  color: #1bff80;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: rgba(27, 255, 128, 0.2);
+  }
+}
+
+.volumeSliderContainer {
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+.volumeSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  outline: none;
+  
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1bff80;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(27, 255, 128, 0.8);
+  }
+  
+  &::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1bff80;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(27, 255, 128, 0.8);
+    border: none;
+  }
+}
+
+.audioVisualization {
+  display: flex;
+  align-items: flex-end;
+  height: 20px;
+  gap: 3px;
+  margin-left: 10px;
+}
+
+.audioBar {
+  width: 3px;
+  background-color: #1bff80;
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(27, 255, 128, 0.8);
+}
+
+.videoCaption {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #1bff80;
+  font-weight: 500;
+  
+  span {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #1bff80;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: center;
+    }
+  }
+  
+  &:hover span::after {
+    transform: scaleX(1);
+  }
+}
+
+// Terminal effects
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.15;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(27, 255, 128, 0.2) 51%,
+    transparent 51%
+  );
+  background-size: 100% 4px;
+  animation: scanline 6s linear infinite;
+}
+
+.glitchEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.05;
+  background-image: 
+    repeating-linear-gradient(
+      0deg, 
+      rgba(255, 255, 255, 0.1), 
+      rgba(255, 255, 255, 0.1) 1px, 
+      transparent 1px, 
+      transparent 2px
+    );
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .circularVideoContainer {
+    max-width: 100%;
+  }
+  
+  .playButton {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .audioControls {
+    bottom: 10px;
+    padding: 3px 8px;
+  }
+  
+  .audioVisualization {
+    height: 15px;
+    gap: 2px;
+  }
+  
+  .audioBar {
+    width: 2px;
+  }
+} 
