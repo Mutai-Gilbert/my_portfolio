@@ -23,6 +23,45 @@ export default function HeroSection() {
             that power seamless digital experiences.
           </p>
           
+          <motion.div 
+            className={styles.videoSection}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <h3 className={styles.videoTitle}>Watch My Introduction</h3>
+            <div className={styles.videoWrapper}>
+              <video 
+                className={styles.video}
+                controls
+                poster="/images/video-thumbnail.jpg"
+              >
+                <source src="/videos/introduction.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p className={styles.videoCaption}>A brief introduction to my work and approach</p>
+          </motion.div>
+          
+          <motion.div 
+            className={styles.alignmentNote}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className={styles.noteContent}>
+              <h3 className={styles.noteTitle}>Important Note for Recruiters</h3>
+              <p>
+                Please ensure that my resume and LinkedIn profile dates and details are aligned 
+                before considering my application. Consistency in professional history is crucial 
+                for a successful hiring process.
+              </p>
+              <Link href="/about">
+                <a className={styles.noteLink}>View my professional timeline →</a>
+              </Link>
+            </div>
+          </motion.div>
+          
           <div className={styles.actions}>
             <Link href="/projects">
               <a className={styles.primaryButton}>View My Work</a>

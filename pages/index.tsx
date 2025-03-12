@@ -51,14 +51,14 @@ export default function Home() {
                   transition={{ duration: 0.8 }}
                 >
                   <h1 className={styles.title}>
-                    <span className={styles.highlight}>Backend Engineer</span> with a passion for scalable solutions
+                    <span className={styles.highlight}>AI-Powered Backend Engineer</span> crafting intelligent systems
                   </h1>
                   <p className={styles.introduction}>
-                    Hi, I'm Mutai 👋 I design and implement robust systems that power seamless digital experiences.
+                    Hi, I'm Mutai 👋 I leverage AI to build efficient, scalable, and adaptive backend solutions.
                   </p>
                   <div className={styles.ctaContainer}>
-                    <HomeLink linkTo="/projects" text="View My Work" />
-                    <HomeLink linkTo="/about" text="About Me" />
+                    <HomeLink linkTo="/projects" text="AI Projects" />
+                    <HomeLink linkTo="/about" text="About My AI Journey" />
                   </div>
                 </motion.div>
                 <motion.div 

@@ -5,31 +5,32 @@ import styles from "@/styles/components/SkillsVisualization.module.scss";
 interface Skill {
   name: string;
   level: number; // 1-10
-  category: "frontend" | "backend" | "tools" | "languages";
+  category: "AI Models" | "AI Tools" | "AI Development" | "Data & Ethics";
 }
 
 const skills: Skill[] = [
-  { name: "Python", level: 9, category: "languages" },
-  { name: "Golang", level: 8, category: "languages" },
-  { name: "TypeScript", level: 9, category: "languages" },
-  { name: "React", level: 8, category: "frontend" },
-  { name: "Express", level: 9, category: "backend" },
-  { name: "Node.js", level: 9, category: "backend" },
-  { name: "Next.js", level: 8, category: "frontend" },
-  { name: "Docker", level: 8, category: "tools" },
-  { name: "AWS", level: 7, category: "tools" },
-  { name: "FeathersJS", level: 7, category: "backend" },
-  { name: "Digital Ocean", level: 7, category: "tools" },
+  { name: "Prompt Eng.", level: 9, category: "AI Development" },
+  { name: "LLM Orch.", level: 8, category: "AI Tools" },
+  { name: "Model Fine-Tune", level: 8, category: "AI Models" },
+  { name: "AI APIs", level: 9, category: "AI Development" },
+  { name: "ML Pipelines", level: 8, category: "AI Models" },
+  { name: "Cloud AI", level: 7, category: "AI Tools" },
+  { name: "AI Testing", level: 7, category: "AI Development" },
+  { name: "AI Agents", level: 7, category: "AI Models" },
+  { name: "Code AI", level: 8, category: "AI Development" },
+  { name: "AI Ethics", level: 9, category: "Data & Ethics" },
+  { name: "AI Analytics", level: 8, category: "Data & Ethics" },
+  { name: "AI CI/CD", level: 7, category: "AI Tools" },
 ];
 
 export default function SkillsVisualization() {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Technical Skills</h2>
+      <h2 className={styles.title}>AI Skills</h2>
       <div className={styles.categories}>
-        {["languages", "backend", "frontend", "tools"].map(category => (
+        {["AI Models", "AI Tools", "AI Development", "Data & Ethics"].map(category => (
           <div key={category} className={styles.category}>
-            <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+            <h3>{category}</h3>
             <div className={styles.skillsList}>
               {skills
                 .filter(skill => skill.category === category)
@@ -51,4 +52,4 @@ export default function SkillsVisualization() {
       </div>
     </div>
   );
-} 
+}

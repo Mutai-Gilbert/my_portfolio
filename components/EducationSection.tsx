@@ -4,13 +4,13 @@ import styles from "@/styles/pages/About.module.scss";
 
 const EducationSection = () => (
   <AboutSection>
-    <h1>Education</h1>
+    <h1>Education & Certifications</h1>
     <p>
       <strong>Dedan Kimathi University - Bachelor of Science in Actuarial Science</strong> -
-      The program is designed to prepare students for a career as an actuary, which involves using mathematical and statistical models to assess financial risks and develop strategies to minimize them.
+      A rigorous program focused on mathematical and statistical modeling for risk assessment and financial strategy. This foundation provides a strong analytical base for my work in technology and machine learning.
       -{" "}
       <a
-        href="/files/"
+        href="/files/actuarial.pdf" // Update with the actual certificate path
         target="_blank"
         className={styles.link}
       >
@@ -18,32 +18,11 @@ const EducationSection = () => (
       </a>
     </p>
     <p>
-      <strong>Microverse JavaScript Module</strong> -
-      Students earn this credential after demonstrating understanding and mastery of JavaScript. During the course of this module, they build several projects using JavaScript while pair-programming remotely with an international team of software developers.-{" "}
-      <a
-        href="/files/javascript.pdf"
-        target="_blank"
-        className={styles.link}
-      >
-        CERTIFICATE
-      </a>
-    </p>
-    <p>
-      <strong>Microverse React & Redux Module</strong> - Students earn this credential after demonstrating thorough understanding and mastery of React and Redux. Over the course of this module, students build and develop multiple projects using React and Redux, working both independently and while remotely pair-programming. -{" "}
-      <a
-        href="/files/reactredux.pdf"
-        target="_blank"
-        className={styles.link}
-      >
-        CERTIFICATE
-      </a>
-    </p>
-    <p>
-      <strong>Microverse Ruby/Databases Module</strong> - 
-      Students earn this credential after demonstrating thorough understanding and mastery of Ruby/Databases. Over the course of this module, students build and develop multiple projects using Ruby/Databases, working both independently and while remotely pair-programming.            
+      <strong>AWS Certified Cloud Practitioner</strong> -
+      Demonstrated foundational knowledge of AWS cloud services, architecture, security, and pricing. This certification validates my understanding of core cloud concepts and their application in building scalable and reliable solutions.
       -{" "}
       <a
-        href="/files/ruby.pdf"
+        href="/files/aws-cloud-practitioner.pdf" // Update with the actual certificate path
         target="_blank"
         className={styles.link}
       >
@@ -51,36 +30,11 @@ const EducationSection = () => (
       </a>
     </p>
     <p>
-      <strong>Microverse Ruby on Rails Module</strong> - Students earn this credential after demonstrating thorough understanding and mastery of Ruby on Rails. Over the course of this module, students build and develop multiple projects using Ruby on Rails, working both independently and while remotely pair-programming -{" "}
-      <a
-        href="/files/rubyonrails.pdf"
-        target="_blank"
-        className={styles.link}
-      >
-        CERTIFICATE
-      </a>
+      <strong>AWS Certified Machine Learning - Specialty (In Progress)</strong> -
+      Currently pursuing this advanced certification to deepen my expertise in building, training, tuning, and deploying machine learning models on AWS. This reflects my commitment to specializing in machine learning and leveraging cloud-based solutions for advanced data analysis and model deployment.
+      -{" "}
+      <span>Expected Completion: [Date/Quarter]</span>
     </p>
-    <p>
-      <strong>Microverse Final Capstone Module</strong> - Students earn this credential after demonstrating thorough understanding and mastery of React, Redux, JavaScript, Front End Web Development and connecting Back End Web Development using Ruby on Rails. Over the course of this module, students build and develop multiple projects using React, Redux, JavaScript, Front End Web Development and connecting Back End Web Development using Ruby on Rails, working both independently and while remotely pair-programming. -{" "}
-      <a
-        href="/files/fullstackcapstone.pdf"
-        target="_blank"
-        className={styles.link}
-      >
-        CERTIFICATE
-      </a>
-    </p>
-    <p>
-      <strong>Microverse Software Development Program</strong> - 
-      Students earn this credential after working through 1500+ hours of remote pair programming, learning to code with teams from around the world.-{" "}
-      <a
-        href="/files/fullstackwebdevelopement.pdf"
-        target="_blank"
-        className={styles.link}
-      >
-        CERTIFICATE
-      </a>
-    </p> 
   </AboutSection>
 );
 

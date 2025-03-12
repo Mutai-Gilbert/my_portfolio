@@ -27,7 +27,7 @@ export default function Blog() {
         <div className={styles.container}>
             <AboutSection imageUrl={boyComputer}>
                   <h1>Gilbert Mutai</h1>
-                  <p>Software Engineer | Entrepreneurial Mindset | Machine Learning Enthusiast | Drivin Innovation with AI                   </p>
+                  <p>Software Engineer | AWS Mcahine Learning| Building MCP </p>
             </AboutSection>
         <AboutLinks /> 
         </div>
