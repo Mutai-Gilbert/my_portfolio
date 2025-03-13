@@ -1,6 +1,7 @@
 export type Frontmatter = {
   title: string;
   thumbnail: string;
+  galleryImages?: string[];
   problem: string;
   solution: string;
   siteUrl: string;

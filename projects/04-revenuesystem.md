@@ -1,16 +1,22 @@
 ---
 title: "County Revenue Management System"
+thumbnail: "images/county-revenue-thumbnail.jpg"
+galleryImages: [
+  "images/county-revenue-thumbnail.jpg",
+  "images/county-revenue-thumbnail.jpg",
+  "images/county-revenue-thumbnail.jpg",
+  "images/county-revenue-thumbnail.jpg"
+]
 problem: "Managing and analyzing county revenue data can be a complex and time-consuming process. Traditional methods often involve manual data entry, spreadsheets, and disparate systems, leading to inefficiencies and potential errors."
 solution: "This Next.js application provides a centralized and user-friendly platform for managing and analyzing county revenue data. It streamlines data entry, automates calculations, and generates interactive visualizations to facilitate informed decision-making."
-thumbnail: images/county-revenue-thumbnail.jpg
-siteUrl: "https://mutai-gilbert.github.io/county-revenue-app/" 
-codeUrl: "https://github.com/Mutai-Gilbert/county-revenue-app" 
 technologies:
     - Next.js
     - TypeScript
     - Tailwind CSS
-    - Chart.js (or other visualization library)
-    - PostgreSQL (or other database)
+    - Chart.js
+    - PostgreSQL
+siteUrl: "https://mutai-gilbert.github.io/county-revenue-app/" 
+codeUrl: "https://github.com/Mutai-Gilbert/county-revenue-app" 
 toc:
   - overview
   - goals

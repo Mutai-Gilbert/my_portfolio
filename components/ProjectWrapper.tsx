@@ -59,6 +59,7 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
                 className={styles.link}
                 href={frontmatter.siteUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 onMouseEnter={() => setLinkIcon(linkHover)}
                 onMouseLeave={() => setLinkIcon(link)}
               >
@@ -69,6 +70,7 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
                 className={styles.link}
                 href={frontmatter.codeUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 onMouseEnter={() => setGitHubIcon(gitHubHover)}
                 onMouseLeave={() => setGitHubIcon(gitHub)}
               >

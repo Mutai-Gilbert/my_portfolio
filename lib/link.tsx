@@ -1,13 +1,9 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import NextLink from "next/link";
+import React from "react";
 
 type Props = {
-  children: React.ReactNode;
   href: string;
-  prefetch?: boolean;
-  replace?: boolean;
-  shallow?: boolean;
-  openNewWindow?: boolean;
+  children: React.ReactNode;
   className?: string;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
@@ -19,53 +15,20 @@ type Props = {
 // This issue and solution is described more in this issue: 
 // https://github.com/vercel/next.js/discussions/18724#discussioncomment-4421594
 export default function Link({
-  children,
   href,
-  prefetch = true,
-  replace = false,
-  shallow = false,
-  openNewWindow = true,
+  children,
   className,
   onMouseEnter,
   onMouseLeave,
-  ...props
 }: Props) {
-  const router = useRouter();
-  const { asPath } = router;
-  const externalLink =
-    href.startsWith("https://") || href.startsWith("http://");
-
-  /* Prefetching */
-  useEffect(() => {
-    if (prefetch && !externalLink) {
-      router.prefetch(href);
-    }
-  }, [router, href, prefetch, externalLink]);
-
-  /* If href is equal to current route, return children */
-  if (asPath == href) return <span className={className} {...props}>{children}</span>;
-
-  /* Create custom event on click and dispatch it */
-  // @ts-ignore
-  const clickHandler = (event) => {
-    if (externalLink) return;
-    event.preventDefault();
-    const linkClickedEvent = new CustomEvent("onLinkClicked", {
-      detail: { href: href, replace: replace, shallow: shallow },
-    });
-    document.dispatchEvent(linkClickedEvent);
-  };
-
   return (
-    <a
-      {...props}
+    <NextLink
       href={href}
-      onClick={clickHandler}
+      className={className}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={className}
     >
       {children}
-    </a>
+    </NextLink>
   );
 }

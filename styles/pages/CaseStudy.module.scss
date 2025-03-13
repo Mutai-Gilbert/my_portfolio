@@ -144,3 +144,353 @@
     }
   }
 }
+
+.galleryPreview {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+    
+    .galleryIndicator {
+      background-color: rgba(27, 255, 128, 0.3);
+    }
+    
+    .stackedImage1, .stackedImage2 {
+      transform: translateY(0);
+    }
+  }
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 2px solid #1bff80;
+  box-shadow: 0 0 15px rgba(27, 255, 128, 0.3);
+  object-fit: cover;
+  z-index: 3;
+  position: relative;
+}
+
+.galleryIndicator {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #1bff80;
+  border-radius: 20px;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease;
+  z-index: 4;
+}
+
+.galleryIcon {
+  display: flex;
+  align-items: center;
+}
+
+.galleryText {
+  color: #1bff80;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+// Stacked images effect
+.stackedImage1, .stackedImage2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 2px solid #1bff80;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.stackedImage1 {
+  z-index: 1;
+  transform: translateY(10px) rotate(-2deg);
+}
+
+.stackedImage2 {
+  z-index: 2;
+  transform: translateY(5px) rotate(1deg);
+}
+
+// Full screen gallery modal
+.galleryModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.galleryContent {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1bff80;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgba(27, 255, 128, 0.3);
+  padding: 20px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid rgba(27, 255, 128, 0.3);
+    border-radius: 8px;
+    pointer-events: none;
+    animation: glowPulse 2s infinite alternate;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(27, 255, 128, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(27, 255, 128, 0.6);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #1bff80;
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(27, 255, 128, 0.5);
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: rgba(27, 255, 128, 0.2);
+    transform: scale(1.1);
+  }
+}
+
+.galleryControls {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.galleryNavButton {
+  background: none;
+  border: none;
+  color: #1bff80;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(27, 255, 128, 0.5);
+  transition: all 0.2s ease;
+  z-index: 5;
+  
+  &:hover {
+    background-color: rgba(27, 255, 128, 0.2);
+    transform: scale(1.1);
+  }
+}
+
+.galleryImageContainer {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.galleryImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galleryImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid rgba(27, 255, 128, 0.3);
+}
+
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(27, 255, 128, 0.05) 51%,
+    transparent 51%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.galleryThumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #1bff80;
+    border-radius: 10px;
+  }
+}
+
+.galleryThumbnail {
+  width: 80px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+  position: relative;
+  
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  &.activeThumbnail {
+    border-color: #1bff80;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(27, 255, 128, 0.5);
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid #1bff80;
+      pointer-events: none;
+    }
+  }
+}
+
+.galleryCounter {
+  margin-top: 15px;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.currentIndex {
+  color: #1bff80;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.totalImages {
+  color: rgba(27, 255, 128, 0.7);
+  font-size: 1rem;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .galleryControls {
+    height: 50%;
+  }
+  
+  .galleryThumbnails {
+    gap: 5px;
+  }
+  
+  .galleryThumbnail {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .galleryNavButton {
+    width: 40px;
+    height: 40px;
+  }
+}

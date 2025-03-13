@@ -15,8 +15,8 @@ export default function HomeLink({ linkTo, text }: Props) {
 
   return (
     <Link
-      className={styles.link}
       href={linkTo}
+      className={styles.link}
       onMouseEnter={() => setRightArrowIcon(rightArrowHover)}
       onMouseLeave={() => setRightArrowIcon(rightArrow)}
     >
