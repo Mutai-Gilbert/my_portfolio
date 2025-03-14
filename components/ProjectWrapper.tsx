@@ -23,6 +23,17 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
   const [rightArrowIcon, setRightArrowIcon] = useState(rightArrow);
   const { ref, inView } = useInView({ triggerOnce: true });
 
+  // Ensure frontmatter properties exist with defaults
+  const {
+    title = "Untitled Project",
+    thumbnail = "",
+    problem = "No problem description available",
+    solution = "No solution description available",
+    technologies = [],
+    siteUrl = "#",
+    codeUrl = "#"
+  } = frontmatter || {};
+
   return (
     <motion.article
       ref={ref}
@@ -34,30 +45,30 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
     >
       <div className={styles.leftCorners} />
       <div className={styles.rightCorners} />
-      <h1 className={styles.name}>{frontmatter.title}</h1>
+      <h1 className={styles.name}>{title}</h1>
       <div className={styles.info}>
         <Image
           priority
           width={1500}
           height={900}
           className={styles.thumbnail}
-          alt={frontmatter.title}
-          src={`/${frontmatter.thumbnail}`}
+          alt={title}
+          src={thumbnail ? `/${thumbnail}` : "/images/placeholder-project.jpg"}
         />
         <div className={styles.description}>
           <p>
             <span className={styles.descriptionName}>Problem:</span>{" "}
-            {frontmatter.problem}
+            {problem}
           </p>
           <p>
             <span className={styles.descriptionName}>Solution:</span>{" "}
-            {frontmatter.solution}
+            {solution}
           </p>
           <div className={styles.links}>
             <div className={styles.firstRow}>
               <a
                 className={styles.link}
-                href={frontmatter.siteUrl}
+                href={siteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setLinkIcon(linkHover)}
@@ -68,7 +79,7 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
               </a>
               <a
                 className={styles.link}
-                href={frontmatter.codeUrl}
+                href={codeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setGitHubIcon(gitHubHover)}
@@ -99,7 +110,7 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
         </div>
       </div>
       <ul className={styles.technologies}>
-        {frontmatter.technologies.map((tech) => (
+        {Array.isArray(technologies) && technologies.map((tech) => (
           <li key={tech} className={styles.technology}>
             {tech}
           </li>

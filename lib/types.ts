@@ -16,5 +16,8 @@ export type Project = {
 };
 
 export type ProjectsProps = {
-  projects: Project[];
+  projects: Array<{
+    slug: string;
+    frontmatter: Frontmatter;
+  }>;
 };
