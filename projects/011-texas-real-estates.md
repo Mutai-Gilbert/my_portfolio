@@ -15,8 +15,8 @@ technologies:
   - Inter (Fonts)
   - Lucide Icons
   - Vercel (Deployment)
-siteUrl: "www.texasrealestateexecutives.com"
-codeUrl: "https://github.com/your-username/texas-real-estate.git"
+siteUrl: "https://texasrealestate.netlify.app"
+codeUrl: "https://github.com/Mutai-Gilbert/texas_real_estates"
 toc:
   - overview
   - features
