@@ -1,11 +1,11 @@
 ---
 title: "HW Hanna Warner CPAs"
-thumbnail: "/images/hwhannawarner.jpg"
+thumbnail: "images/hwhannawarner.jpg"
 galleryImages: [
-  "/images/hwhannawarner.jpg",
-  "/images/hwhannawarner.jpg",
-  "/images/hwhannawarner.jpg",
-  "/images/hwhannawarner.jpg"
+  "images/hwhannawarner.jpg",
+  "images/hwhannawarner.jpg",
+  "images/hwhannawarner.jpg",
+  "images/hwhannawarner.jpg"
 ]
 problem: "The accounting firm needed a modern website to effectively showcase their services and expertise online."
 solution: "A responsive Next.js website with professional design and user-friendly features to highlight their accounting services."

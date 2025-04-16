@@ -10,11 +10,11 @@ galleryImages: [
 problem: "Kenyan businesses struggle to adopt AI and cloud technologies due to limited expertise and infrastructure constraints."
 solution: "We provide comprehensive AI and cloud consulting services tailored for the Kenyan market, including strategy development, migration, and custom software solutions."
 technologies:
-  - Cloud Platforms (AWS, Azure, GCP)
-  - AI/ML Frameworks (TensorFlow, PyTorch, Scikit-learn)
-  - Data Analytics Tools (Power BI, Tableau)
-  - Programming Languages (Python, JavaScript, TypeScript)
-  - DevOps Tools (Docker, Kubernetes)
+  - AWS
+  - AI/ML
+  - Kubernetes
+  - Python
+  - Docker
 siteUrl: "https://brogansconsultants.netlify.app"
 codeUrl: "https://github.com/Mutai-Gilbert/Brogans-Cloud-Consultants-Website"
 toc:
