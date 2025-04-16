@@ -1,5 +1,5 @@
 ---
-title: "PigiaJembe - Revolutionizing Kenyan Farming"
+title: "PigiaJembe"
 thumbnail: "images/pigiajembe-thumbnail.jpg"
 galleryImages: [
   "images/pigiajembe-screen1.jpg",
@@ -7,8 +7,8 @@ galleryImages: [
   "images/pigiajembe-screen3.jpg",
   "images/pigiajembe-screen4.jpg"
 ]
-problem: "Small-scale farmers in Kenya often struggle to access modern farming equipment like tractors, hindering their productivity and efficiency. Traditional methods can be time-consuming and labor-intensive, limiting their potential for growth."
-solution: "PigiaJembe is an online platform that connects farmers with trusted tractor owners, providing easy and affordable access to essential equipment. This streamlines farming operations, improves yields, and empowers farmers to embrace modern agricultural practices."
+problem: "Small-scale Kenyan farmers lack access to modern farming equipment, limiting their productivity."
+solution: "An online platform connecting farmers with tractor owners, making modern farming equipment accessible and affordable."
 technologies: 
   - React
   - Node.js

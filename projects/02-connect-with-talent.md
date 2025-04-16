@@ -1,5 +1,5 @@
 ---
-title: "Connect with Talent" 
+title: "Connect Talent"
 thumbnail: "images/connect-with-talent-thumbnail.jpg"
 galleryImages: [
   "images/connect-with-talent-thumbnail.jpg",
@@ -7,8 +7,8 @@ galleryImages: [
   "images/connect-with-talent-thumbnail.jpg",
   "images/connect-with-talent-thumbnail.jpg"
 ]
-problem: "Finding and connecting with top professionals globally can be a complex and time-consuming process. Traditional methods often involve sifting through numerous platforms and profiles, making it challenging to identify the right talent efficiently."
-solution: "This platform offers a streamlined solution by providing a centralized hub for discovering and matching with skilled professionals worldwide. Advanced search filters, detailed profiles, and direct messaging capabilities simplify the process of finding and connecting with the ideal candidates."
+problem: "Finding and connecting with skilled professionals globally is inefficient and time-consuming using traditional methods."
+solution: "A centralized platform that streamlines talent discovery through advanced search filters and direct messaging capabilities."
 technologies:
     - React
     - Node.js

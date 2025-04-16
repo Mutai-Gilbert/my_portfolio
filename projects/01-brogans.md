@@ -1,5 +1,5 @@
 ---
-title: "Brogans AI and Cloud Consulting Services"
+title: "Brogans AI"
 thumbnail: "images/brogans-ai-cloud-thumbnail.jpg"
 galleryImages: [
   "images/brogans-ai-cloud-thumbnail.jpg",
@@ -7,8 +7,8 @@ galleryImages: [
   "images/brogans-ai-cloud-gallery2.jpg",
   "images/brogans-ai-cloud-gallery3.jpg"
 ]
-problem: "Businesses in Kenya face challenges in adopting and integrating modern technologies like AI and cloud computing due to limited expertise, infrastructure constraints, and the need for tailored solutions that address local market dynamics."
-solution: "Brogans AI and Cloud Consultants provides comprehensive services to help businesses in Kenya leverage AI and cloud technologies. Our services include AI strategy development, cloud migration and management, custom software development, data analytics, and IT consulting, all tailored to the unique needs of the Kenyan market."
+problem: "Kenyan businesses struggle to adopt AI and cloud technologies due to limited expertise and infrastructure constraints."
+solution: "We provide comprehensive AI and cloud consulting services tailored for the Kenyan market, including strategy development, migration, and custom software solutions."
 technologies:
   - Cloud Platforms (AWS, Azure, GCP)
   - AI/ML Frameworks (TensorFlow, PyTorch, Scikit-learn)

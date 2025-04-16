@@ -1,14 +1,14 @@
 ---
-title: "HW Hanna Warner & Associates CPAs Website"
-thumbnail: "/images/hwhannawarner.jpg" # Replace with your actual thumbnail path
+title: "HW Hanna Warner CPAs"
+thumbnail: "/images/hwhannawarner.jpg"
 galleryImages: [
-  "/images/hwhannawarner.jpg", # Replace with your actual thumbnail path
+  "/images/hwhannawarner.jpg",
   "/images/hwhannawarner.jpg",
   "/images/hwhannawarner.jpg",
   "/images/hwhannawarner.jpg"
 ]
-problem: "HW Hanna Warner & Associates CPAs required a modern, responsive website to effectively represent their accounting services and expertise in the digital landscape. Their previous online presence may have lacked the contemporary design and user-friendly features necessary to attract and engage potential clients."
-solution: "This website, built with Next.js and Tailwind CSS, provides a modern and responsive online platform for HW Hanna Warner & Associates CPAs. It offers a seamless user experience across various devices, showcasing their services, team, and commitment to client success in an engaging and professional manner."
+problem: "The accounting firm needed a modern website to effectively showcase their services and expertise online."
+solution: "A responsive Next.js website with professional design and user-friendly features to highlight their accounting services."
 technologies:
   - Next.js 14
   - Tailwind CSS

@@ -1,7 +1,7 @@
 ---
-title: "Create Magical Children's Stories"
-problem: "Creating personalized and engaging stories for children can be time-consuming and challenging. Traditional methods often lack the flexibility to incorporate unique elements and tailor stories to specific children's interests."
-solution: "This Next.js application offers a user-friendly platform to create personalized children's stories. By leveraging AI and intuitive tools, users can easily generate stories that capture children's imaginations and create lasting memories."
+title: "Magical Stories"
+problem: "Creating personalized children's stories is time-consuming and lacks flexibility in customization."
+solution: "An AI-powered platform for generating customized children's stories with interactive tools and personalization options."
 thumbnail: "images/children-stories-thumbnail.jpg"
 galleryImages: [
   "images/children-stories-thumbnail.jpg",

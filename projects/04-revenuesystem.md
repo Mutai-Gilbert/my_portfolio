@@ -1,5 +1,5 @@
 ---
-title: "County Revenue Management System"
+title: "County Revenue Manager"
 thumbnail: "images/county-revenue-thumbnail.jpg"
 galleryImages: [
   "images/county-revenue-thumbnail.jpg",
@@ -7,8 +7,8 @@ galleryImages: [
   "images/county-revenue-thumbnail.jpg",
   "images/county-revenue-thumbnail.jpg"
 ]
-problem: "Managing and analyzing county revenue data can be a complex and time-consuming process. Traditional methods often involve manual data entry, spreadsheets, and disparate systems, leading to inefficiencies and potential errors."
-solution: "This Next.js application provides a centralized and user-friendly platform for managing and analyzing county revenue data. It streamlines data entry, automates calculations, and generates interactive visualizations to facilitate informed decision-making."
+problem: "Manual county revenue management is inefficient and prone to errors, with data scattered across multiple systems."
+solution: "A centralized Next.js platform for managing county revenue data with automated calculations and interactive visualizations."
 technologies:
     - Next.js
     - TypeScript

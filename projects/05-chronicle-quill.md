@@ -1,13 +1,13 @@
 ---
-title: "Chronicle Quill: Digital Time Capsule for Future Memories"
-thumbnail: "images/chronicle-quill-thumbnail.jpg" # Replace with your thumbnail image
+title: "Chronicle Quill"
+thumbnail: "images/chronicle-quill-thumbnail.jpg"
 galleryImages: [
-  "images/chronicle-quill-thumbnail.jpg", # Replace with your screenshot images
+  "images/chronicle-quill-thumbnail.jpg",
   "images/chronicle-quill-thumbnail.jpg",
   "images/chronicle-quill-thumbnail.jpg"
 ]
-problem: "Traditional methods of preserving memories often rely on physical items that can be lost or damaged. Digital journaling can feel impersonal, lacking the tangible connection to physical memories."
-solution: "Chronicle Quill is a mobile and web application that allows users to capture and preserve memories by scanning handwritten letters, drawings, and physical mementos. It creates a digital time capsule that delivers these memories to the user's future self at a scheduled time."
+problem: "Physical memories are vulnerable to loss or damage, while digital journaling lacks personal connection."
+solution: "A mobile and web app that digitizes handwritten letters and physical mementos, creating scheduled digital time capsules."
 technologies:
     - React Native (Mobile)
     - React (Web)

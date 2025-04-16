@@ -7,8 +7,8 @@ galleryImages: [
   "images/budget-manager-gallery2.png",
   "images/budget-manager-gallery3.png"
 ]
-problem: "Managing personal finances can be overwhelming and time-consuming. Many individuals struggle to track their spending, set budgets, and gain insights into their financial habits, leading to financial stress and instability."
-solution: "This web application provides a user-friendly solution to simplify budget management. It offers tools for tracking expenses, categorizing transactions, generating reports, and setting budgets, empowering users to take control of their finances and achieve their financial goals."
+problem: "Personal finance management is overwhelming, with users struggling to track expenses and understand spending habits."
+solution: "A web app for easy expense tracking, budget setting, and financial reporting to help users achieve their financial goals."
 technologies:
   - Ruby on Rails
   - PostgreSQL

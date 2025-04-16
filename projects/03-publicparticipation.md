@@ -1,5 +1,5 @@
 ---
-title: "County Public Participation Forum"
+title: "County Forum"
 thumbnail: "images/public-forum-thumbnail.jpg"
 galleryImages: [
   "images/public-forum-thumbnail.jpg",
@@ -7,8 +7,8 @@ galleryImages: [
   "images/public-forum-thumbnail.jpg",
   "images/public-forum-thumbnail.jpg"
 ]
-problem: "Citizens often lack accessible and engaging platforms to voice their opinions and contribute to local government decisions. This can lead to disengagement and a feeling of disconnect between the community and its representatives."
-solution: "This online forum provides a user-friendly platform for citizens to participate in county-level discussions, share their ideas, and engage with local government officials. It aims to foster transparency, collaboration, and a stronger sense of community."
+problem: "Citizens lack accessible platforms to engage with local government and contribute to decision-making processes."
+solution: "An online forum that enables citizens to participate in county-level discussions and interact directly with local government officials."
 siteUrl: "https://v0-public-participation-forum-yssqzkknshp.vercel.app" 
 codeUrl: "https://github.com/Mutai-Gilbert/public-participation-forum" 
 technologies:
