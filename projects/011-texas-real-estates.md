@@ -1,10 +1,12 @@
 ---
 title: "Texas Real Estate Executives - Next Level Agents"
 thumbnail: "images/texas-real1.jpg"
-galleryImages:
-  - "images/texas-real1.jpg"
-  - "images/texas-real2.jpg"
-  - "images/texas-real3.jpg"
+galleryImages: [
+    "images/texas-real1.jpg",
+    "images/texas-real2.jpg",
+    "images/texas-real3.jpg",
+    "images/texas-real3.jpg"
+  ]
 problem: "Texas Real Estate Executives needed a modern, responsive online presence to effectively showcase their properties and agent services in the Longview, TX area. Their previous website lacked advanced search capabilities, detailed agent profiles, and a seamless user experience across all devices."
 solution: "This modern, responsive website built with Next.js, TypeScript, and Tailwind CSS provides Texas Real Estate Executives with a powerful digital platform. It features advanced property search with filtering, detailed agent profiles, easy access to documents, direct contact integration, and a sleek, professional design optimized for performance and user experience."
 technologies:

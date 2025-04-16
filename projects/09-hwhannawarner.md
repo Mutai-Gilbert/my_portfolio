@@ -4,6 +4,7 @@ thumbnail: "/images/hwhannawarner.jpg" # Replace with your actual thumbnail path
 galleryImages: [
   "/images/hwhannawarner.jpg", # Replace with your actual thumbnail path
   "/images/hwhannawarner.jpg",
+  "/images/hwhannawarner.jpg",
   "/images/hwhannawarner.jpg"
 ]
 problem: "HW Hanna Warner & Associates CPAs required a modern, responsive website to effectively represent their accounting services and expertise in the digital landscape. Their previous online presence may have lacked the contemporary design and user-friendly features necessary to attract and engage potential clients."
